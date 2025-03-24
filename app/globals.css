@@ -29,7 +29,7 @@
 
 :root {
   --radius: 0.625rem;
-  --background: #f3efec;
+  --background: #fef6ed;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -175,8 +175,10 @@
     @apply flex min-h-14 w-full items-center justify-center gap-1.5 rounded-md;
   }
   .btn-primary {
-    @apply w-fit !bg-primary-200 !text-dark-100 hover:!bg-primary-200/80 !rounded-full !font-bold px-5 cursor-pointer min-h-10;
+    @apply w-fit !bg-[#f4be3f] !text-[#ffffff] hover:!bg-[#f7c94a]/80 
+           !rounded-full !font-bold px-5 cursor-pointer min-h-10;
   }
+
   .btn-secondary {
     @apply w-fit !bg-dark-200 !text-primary-200 hover:!bg-dark-200/80 !rounded-full !font-bold px-5 cursor-pointer min-h-10;
   }
@@ -220,7 +222,9 @@
     }
 
     .card-interviewer {
-      @apply flex-center flex-col gap-2 p-7 h-[400px] blue-gradient-dark rounded-lg border-2 border-primary-200/50 flex-1 sm:basis-1/2 w-full;
+      @apply flex-center flex-col gap-2 p-7 h-[400px] rounded-lg border-2 border-[#72d3de]/50 flex-1 sm:basis-1/2 w-full;
+      background-color: #fef6ed;
+      color: #ffffff;
     }
 
     .avatar {
@@ -269,9 +273,8 @@
   }
 
   .card-cta {
-    @apply flex flex-row blue-gradient-dark rounded-3xl px-16 py-6 items-center justify-between max-sm:px-4;
+    @apply flex flex-row bg-gradient-to-r from-[#f2956a] via-[#f1825d] to-[#cf6153] rounded-3xl px-16 py-6 items-center justify-between max-sm:px-4;
   }
-
   .interviews-section {
     @apply flex flex-wrap gap-4 max-lg:flex-col w-full items-stretch;
   }
@@ -289,11 +292,11 @@
   }
 
   .card-interview {
-    @apply dark-gradient rounded-2xl min-h-full flex flex-col p-6 relative overflow-hidden gap-10 justify-between;
+    @apply bg-[#1f2341] text-white rounded-2xl min-h-full flex flex-col p-6 relative overflow-hidden gap-10 justify-between;
+  }
 
-    .badge-text {
-      @apply text-sm font-semibold capitalize;
-    }
+  .card-interview .badge-text {
+    @apply text-sm font-semibold capitalize text-white;
   }
 }
 
